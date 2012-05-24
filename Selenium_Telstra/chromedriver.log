@@ -1,0 +1,67 @@
+[1337690667547][INFO]:    ChromeDriver 18.0.995.0
+[1337690668158][FINE]:    Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.switches": [  ],
+   "chromeOptions": {
+      "args": [  ],
+      "extensions": [  ]
+   },
+   "platform": "ANY",
+   "version": ""
+}
+
+[1337690668159][INFO]:    Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --homepage=about:blank
+[1337690669359][INFO]:    Connected to Chrome successfully. Version: 19.0.1084.46
+[1337690669393][FINE]:    Command received (/session/ee7d0fcc78fb6bf21ab0399c50203f71)
+[1337690669393][FINE]:    Command finished (/session/ee7d0fcc78fb6bf21ab0399c50203f71) with response {
+   "sessionId": "ee7d0fcc78fb6bf21ab0399c50203f71",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "18.0.995.0",
+      "chrome.nativeEvents": false,
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "mac",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "19.0.1084.46",
+      "webStorageEnabled": false
+   }
+}
+
+[1337690669461][FINE]:    Command received (/session/ee7d0fcc78fb6bf21ab0399c50203f71/window_handle)
+[1337690669461][FINER]:   Waiting for all views to stop loading...
+[1337690669461][FINER]:   Done waiting for all views to stop loading
+[1337690669461][FINER]:   Waiting for all views to stop loading...
+[1337690669462][FINER]:   Done waiting for all views to stop loading
+[1337690669462][FINE]:    Command finished (/session/ee7d0fcc78fb6bf21ab0399c50203f71/window_handle) with response {
+   "sessionId": "ee7d0fcc78fb6bf21ab0399c50203f71",
+   "status": 0,
+   "value": "{\"id\":\"2\",\"type\":1}"
+}
+
+[1337690669542][FINE]:    Command received (/session/ee7d0fcc78fb6bf21ab0399c50203f71/url) with params {
+   "url": "https://onlineshop.telstra.com.au/"
+}
+
+[1337690669542][FINER]:   Waiting for all views to stop loading...
+[1337690669542][FINER]:   Done waiting for all views to stop loading
+[1337690708750][FINER]:   Waiting for all views to stop loading...
+[1337690708771][FINER]:   Done waiting for all views to stop loading
+[1337690708771][FINE]:    Command finished (/session/ee7d0fcc78fb6bf21ab0399c50203f71/url) with response {
+   "sessionId": "ee7d0fcc78fb6bf21ab0399c50203f71",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[1337690708775][FINE]:    Command received (/session/ee7d0fcc78fb6bf21ab0399c50203f71)

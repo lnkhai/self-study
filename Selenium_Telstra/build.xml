@@ -1,0 +1,70 @@
+<project name="Run Selenium Tests" default="all_tests" basedir=".">
+	<property name="src" location="src" />
+	<property name="bin" location="bin" />
+	<property name="lib" location="lib" />
+	<property name="testresults" location="junit-results" />
+	<property name="testreport" location="junit-report" />
+
+	<path id="junit.class.path">
+		<pathelement location="${lib}/junit-4.10.jar" />
+		<pathelement location="${lib}/ant-junit4.jar" />
+		<pathelement location="${lib}/selenium-server-standalone-2.20.0.jar" />
+		<pathelement location="${lib}/poi-3.8-beta5-20111217.jar" />
+		<pathelement location="${lib}/joda-time-2.1.jar" />
+		<pathelement location="${bin}" />
+	</path>
+
+	<!-- Deletes the existing build and result directories-->
+	<target name="clean">
+		<delete dir="${bin}" />
+		<delete dir="${testresults}" />
+		<delete dir="${testreport}" />
+	</target>
+	
+	<!-- Creates the  build, and test results directories-->
+	<target name="makedir">
+		<mkdir dir="${bin}" />
+		<mkdir dir="${testresults}" />
+		<mkdir dir="${testreport}" />
+	</target>
+
+	<!-- Compiles the java code -->
+	<target name="compile" depends="clean, makedir">
+		<javac srcdir="${src}" destdir="${bin}" debug="true" includeAntRuntime="false">
+			<classpath refid="junit.class.path" />
+		</javac>
+	</target>
+	
+	<!-- Report of the test -->
+	<target name="report-junit">
+		<junitreport todir="${testreport}">
+			<fileset dir="${testresults}">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report format="frames" todir="${testreport}"/>
+		</junitreport>
+	</target>
+	
+	<!-- Run the test with JUnit -->
+	<target name="run_junit_tests">
+		<junit printsummary="yes" fork="yes" errorproperty="junit.error" failureproperty="junit.error">
+			<classpath refid="junit.class.path" />
+			<formatter type="xml" />
+			<test todir="${testresults}" name="com.example.LogBeforeTest" />
+<!--			
+			<test todir="${testresults}" name="com.example.tests.SearchIssueTestSuiteSummary" />
+			<test todir="${testresults}" name="com.example.tests.SearchIssueTestSuiteIssueType" />
+			<test todir="${testresults}" name="com.example.tests.SearchIssueTestSuiteCreatedPeriod" />
+-->
+			<test todir="${testresults}" name="com.example.tests.SearchIssueTestSuiteSummary" />
+			<test todir="${testresults}" name="com.example.LogAfterTest" />
+		</junit>
+		<antcall target="report-junit"/>
+		<fail if="junit.error" message="Selenium test(s) failed.  See reports!"/>
+	</target>
+		
+	<!-- default action -->
+	<target name="all_tests" depends="compile" description="The Main Target for running all tests">
+		<antcall target="run_junit_tests"/>
+	</target>
+</project>
