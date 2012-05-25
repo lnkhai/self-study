@@ -1,5 +1,3 @@
 package com.telstra;
 
-public class Lab {
-
-}
+public class Lab { }
