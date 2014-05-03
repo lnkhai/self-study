@@ -5,3 +5,4 @@
 *.gz
 **/target
 **/.idea
+.DS_Store
