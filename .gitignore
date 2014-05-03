@@ -3,3 +3,5 @@
 *.xls
 *.zip
 *.gz
+**/target
+**/.idea
