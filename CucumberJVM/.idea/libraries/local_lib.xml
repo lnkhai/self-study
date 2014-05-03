@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="local-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/cucumber-core-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cucumber-java-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cucumber-junit-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cucumber-picocontainer-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hamcrest-all-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jchronic-0.2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/junit-4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/selenium-server-standalone-2.41.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

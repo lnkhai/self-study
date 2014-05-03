@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: cukejvm.RunCukesTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 47.057 sec <<< FAILURE!
+And customer select Add-On with code:(Scenario: Create New Postpaid Mobile Plan Order)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError: Addon Price is not correct
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at cukejvm.support.pages.AddOnPage.selectAddOn(AddOnPage.java:47)
+	at cukejvm.step_definitions.CheckOutPageStepDefs.selectAddOn(CheckOutPageStepDefs.java:62)
+	at ?.And customer select Add-On with code:(cukejvm/simple_new_postpaid_order.feature:11)
+Scenario: Create New Postpaid Mobile Plan Order  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError: Addon Price is not correct
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at cukejvm.support.pages.AddOnPage.selectAddOn(AddOnPage.java:47)
+	at cukejvm.step_definitions.CheckOutPageStepDefs.selectAddOn(CheckOutPageStepDefs.java:62)
+	at ?.And customer select Add-On with code:(cukejvm/simple_new_postpaid_order.feature:11)
